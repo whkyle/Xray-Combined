@@ -1,0 +1,59 @@
+%%\documentclass[%
+%% aip,
+%% jmp,%
+%% amsmath,amssymb,nofootinbib,
+%%preprint,%
+%%%reprint,%
+%%%author-year,%
+%%%author-numerical,%
+%%]{revtex4-1}
+
+\documentclass[preprint,5p]{elsarticle}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{pennames}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{float,verbatim,hyperref}
+\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+\modulolinenumbers[5]% https://www.overleaf.com/5788191175jnrbsnhpffds[5]
+\linenumbers\relax % Commence numbering lines
+
+\begin{document}
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{frontmatter}
+\title{X-ray Scanning Technique For Alignment of Photodetectors}
+\author[uci]{William Kyle}
+\author[uci]{Terence Libeiro}
+\address[uci]{University of California, Irvine}
+
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+\end{frontmatter}
+%\tableofcontents
+
+
+
+%\maketitle
+
+\input{section1.tex}
+\input{section2.tex}
+\input{section3.tex}
+\input{section4.tex}
+\input{section5.tex}
+\input{section6.tex}
+\input{section7.tex}
+\input{section8.tex}
+\input{section9.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{main}
+
+%\input{tempAsymSection.tex}
+\end{document}
