@@ -95,14 +95,16 @@ thermal contraction and 3D MPPC location.
  & $Z_{n} - Z_{n-1}$ &Std. Dev.& $\phi_{n} - \phi_{n-1}$ & Std. Dev. \\
  & [mm] &[mm]& [mrad]& [mrad]\\
 \hline
-Odd  $n$ & 15.69 & 0.49 & 24.12 & 0.54 \\ 
-Even $n$ & 14.57 & 0.57 & 23.38 & 0.70 \\ 
+Odd  $n$ & 15.10 & 0.25 & 24.12 & 0.54 \\ 
+Even $n$ & 15.06 & 0.26 & 23.38 & 0.70 \\ 
 %Nominal  & 15.1  &      & 23.55 & \\
 \end{tabular}
 \caption{Mean Z and $\phi$ spacing calculated for Odd-Even and Even-Odd
 combination  of adjacent MPPCs.}
 \label{tab:oddeven}
 \end{table}
+%Odd  $n$ & 15.69 & 0.49 & 24.12 & 0.54 \\ 
+%Even $n$ & 14.57 & 0.57 & 23.38 & 0.70 \\ 
 
 \begin{table}
 \begin{tabular}{clc}
@@ -330,16 +332,14 @@ adjacent channels.  The selection described in Sec.
 \ref{sec:mppcposition} applied for single photodetector scan is used
 with additional criteria to include events with X-ray interactions
 between two photodetectors.  The requirement of minimal largest charge
-in the single illuminated channel is reduced to 0.3~pC and the sum of
-charges in the two illuminated channels is required to exceed 70\% of
-total charge in the signal region.  Due to large variation in the gain
+may be satisfied either by a single illuminated channel, or by the sum of two adjacent channels.  Due to large variation in the gain
 of individual photodetectors, the charge from each photodetector is
-normarlized to avoid skewing the asymmetry distribution. The mean
+normalized to avoid skewing the asymmetry distribution. The mean
 charge is calculated for each photodetector in the central scanning
 region and normalized before applying selection.
 
 The charge asymmetry for a given photodetector $i$
-is calculated per event are  calculated as  
+is calculated per event are as,  
 \begin{equation} \label{eqn:qasym}
     A(Q)  = 
 \frac{Q_{i}-Q_{i+1}}
@@ -381,8 +381,8 @@ two photodetectors.}
 
 \begin{figure}
 \centering
-\includegraphics[width=4cm]{asymmetryplots/asymzoffset.pdf}
-\includegraphics[width=4cm]{asymmetryplots/asymphioffset.pdf}
+\includegraphics[width=4cm]{asymmetryplots/asymdz.pdf}
+\includegraphics[width=4cm]{asymmetryplots/asymdphi.pdf}
 \caption{Comparison between photodetector position calculated from
 charge asymmetry and X-ray event rates.}
 \label{fig:asymvsfit} 
@@ -392,8 +392,8 @@ charge asymmetry and X-ray event rates.}
 
 \begin{figure}
 \centering
-\includegraphics[width=4cm]{asymmetryplots/asymzwid.pdf}
-\includegraphics[width=4cm]{asymmetryplots/asymphiwid.pdf}
+\includegraphics[width=4cm]{asymmetryplots/asymzsize.pdf}
+\includegraphics[width=4cm]{asymmetryplots/asymphisize.pdf}
 \caption{Photodetector size in Z and phi measured using the edge of the
 photodetector calculated with charge asymmetry.}
 \label{fig:mppcsize} 
