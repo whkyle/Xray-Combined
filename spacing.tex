@@ -1,0 +1,121 @@
+\subsection{Spacing in Z and $\phi$}
+The photodetectors are manufactured and assembled in lattice formation
+to high precision, which can be used for validation of the X-ray
+scanning technique and calculate its resolution.  A change in the
+spacing can also reveal the effect of thermal cooling as well as
+installation errors.  The spacing between individual MPPC pairs as
+well as mean spacing between adjacent MPPC is calculated per PCB strip
+(row-wise) along Z and per cfrp plate (column-wise) along \phis. 
+
+Table \ref{tab:oddeven} shows spacing between individual MPPC pairs separated
+into two groups which include alternate pairs along columns for Z measurement,
+and rows for $\phi$ measurement.  Nominally we expect the spacing to be equal in
+the two groups; the data shows the spacing in Z coordinate differs by 0.88~mm
+and 0.74~mrad in the $\phi$ coordinate.  The average spacing over the scanned
+region (shown in table \ref{tab:avgspacing}), however, is consistent with
+expectation after accounting for thermal cooling.  
+This implies a systematic shift or miscalculated position 
+of one set of every other MPPC by 0.22~mm (0.18 mrad), and the oppposite 
+shift for the complementary set, such there is not net displacement over the entire
+row or column. 
+
+The source of this discrepancy is not known.
+Two possible causes were investigasted that could introduce observed 
+systematic shifts in reconstructed MPPC positions with the periodicty of 
+$\sim$30 mm, or two MPPC widths: X-ray corrections and trigger bias.
+Although inaccurate corrections to the X-ray position can introduce the magnitude of 
+displacement in MPPC position observed the periodicity of the corrections
+does not match that of the observed effect; Z corrections have a period of 
+100~mm while $\phi$ corrections are monotonic.
+Similarly, studies of the effect of trigger configuration on the reconstructed position 
+were not able to replicate this effect. 
+
+As the scale of the systematic shift is small compared to the overall
+X-ray measurement uncertainty as well as the precision goals of the
+MEG experiment, it is expected to have minimal effect on the photon
+position resolution.  We estimate this effect on photon reconstrution
+using MC simulation.  A photon interaction is simulated at
+normal distance equivalent to one radiation length
+($\lambda_{LXe}\approx$ 2.75 cm) over a two dimensional surface
+consisting of (20 $\times$ 20) photodetector array.  The dimensions and
+spacing of the photodetectors are identical to the MPPC 
+in the LXe calorimeter.  The isotropic distribution of photons generated as a
+result is recorded by the photodetector array. The signal in each
+photodetector is proportional to the solid angle subtended to the
+interaction point, and detection efficiency determined by the photon
+incident angle, measured in standalone tests.  
+Each event is simulated with an interaction point
+chosen randomly in a 30$\times$30~mm$^2$ region equivalent to two MPPC
+widths, and reconstructed twice, with nominal and systematically
+shifted photodetector positions by 0.22~mm.  The photon position is
+reconstructed using weighted mean of the signal recorded in the
+photodetectors.
+The results show no mean displacement, while the photo 
+position resolution is degraded by 0.08~mm in the 
+measurement plane.
+
+The mean distance between adjacent MPPCs is calculated using only the
+measurements at the end of the row or column.  The precision of the
+measurement is improved as a result compared to the pair-wise spacing
+by  one (two) order of magnitude in Z ($\phi$).  In the Z coordinate,
+the mean distance is calculated for each PCB strip as well as for the
+half-strips (US and DS) connected at the center.  Similarly in the
+$\phi$ coordinate, the mean distance is calculated within individual
+cfrp plates and overall.  The mean and standard deviation of the
+calculated mean distance in Z and $\phi$  show a regular grid
+structure with no deformation in the scanned region (table
+\ref{tab:avgspacing}).
+
+The effect of thermal cooling is seen in Z with the mean distance
+15.08~mm  or 30~\micron contraction between adjacent MPPCs. The mean
+distance in $\phi$ is dependent on the X-coordinate of the
+semi-cylindrical LXe calorimeter whose center is nominally aligned
+with the center of the X-ray scanning device.  During the X-ray survey
+the calorimeter was off-center, shifted towards the X-ray device by
+3.85~mm increasing the mean angular spacing seen in the data.  The
+following sections detail the qualitative use of X-ray data to measure
+thermal contraction and 3D MPPC location.
+
+\begin{table}
+\centering
+\begin{tabular}{ccccc}
+ & $Z_{n}-Z_{n-1}$ &Std. Dev.& $\phi_{n}-\phi_{n-1}$ & Std. Dev. \\
+ & [mm] &[mm]& [mrad]& [mrad]\\
+\hline
+Odd  $n$ & 15.16 & 0.32 & 23.71 & 0.78 \\ 
+Even $n$ & 14.98 & 0.35 & 23.69 & 0.57 \\ 
+%Nominal  & 15.1  &      & 23.55 & \\
+\end{tabular}
+\caption{Mean Z and $\phi$ spacing calculated for Odd-Even and Even-Odd
+combination  of adjacent MPPCs.}
+\label{tab:oddeven}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{clc}
+   & Z [mm] &Std. Dev. [mm] \\
+\hline
+US     & 15.10 & 0.05  \\
+DS     & 15.06 & 0.03  \\
+All    & 15.06 & 0.02  \\
+Nominal& 15.1      &
+\end{tabular}
+
+\begin{tabular}{clc}
+   & $\phi$ [mrad] &Std. Dev. [mrad] \\
+\hline
+cfrp 1     & 23.72 & 0.08  \\
+cfrp 2     & 23.70 & 0.01  \\
+cfrp 3     & 23.71 & 0.04  \\
+cfrp 4     & 23.73 & 0.04  \\
+All        & 23.72 & 0.01  \\
+Nominal    & 23.55 &     
+\end{tabular}
+\label{tab:avgspacing}
+\caption{Mean distance between adjacent MPPC calculated over the entire row (Z) or 
+column ($\phi$). Upstream (US) and downstream (DS) parts of each PCB strip, and
+individual cfrp plates are calculated separately, and altogether.}
+\end{table}
+
+

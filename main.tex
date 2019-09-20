@@ -8,7 +8,7 @@
 %%%author-numerical,%
 %%]{revtex4-1}
 
-\documentclass[preprint,5p]{elsarticle}
+\documentclass[preprint,5p]{elsarticle} %change to 5p for double column, 3p for single column, 3p,twocolumn for double column different margins
 
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -18,8 +18,8 @@
 \usepackage{amsmath}
 \usepackage{float,verbatim,hyperref}
 \usepackage[mathlines]{lineno}% Enable numbering of text and display math
-\modulolinenumbers[5]% https://www.overleaf.com/5788191175jnrbsnhpffds[5]
-\linenumbers\relax % Commence numbering lines
+\modulolinenumbers[5]
+\linenumbers\relax % Commence numbering lines   %comment this line to remove linenumbers
 
 \begin{document}
 
@@ -30,15 +30,58 @@
 \title{X-ray Scanning Technique For Alignment of Photodetectors}
 \author[uci]{William Kyle}
 \author[uci]{Terence Libeiro}
+\author[uci]{William Molzon}
 \address[uci]{University of California, Irvine}
 
 \begin{abstract}
 \input{abstract.tex}
 \end{abstract}
 \end{frontmatter}
-%\tableofcontents
+\tableofcontents
 
+\[For\; Thursday \]
+ \begin{enumerate}
+    \item merge documents 
+    \item normalize file names so they agree with section names 
+\end{enumerate}
+    
 
+\[For\; Thursday \]
+\begin{enumerate}
+    \item bill will comment section 1 
+    \item bill will comment section 2 
+    \item bill will comment on section and subsection titles
+    \item final section 3 done terence 
+    \item final updates section 4 
+    \item add subsection systematic checks before uncertainties 
+    \item section 8  will \\
+        get the change in mppc position 17 vs 18 into section 7. 
+        move charge asymmetry to 7 ( analysis or systematic checks ). 
+        charge vs. peak amplitude plots fixed .
+\end{enumerate}
+    
+    
+    
+
+    
+    
+    
+    
+    
+         
+\[For\; sometime\]
+\begin{enumerate}
+  \item  section 5 check of what was not done alignment for 2017 
+  \item section 6 needs trigger description 
+  \item  section 7 relatively major mods / change title to include word \item results 
+        analysis description expansion \\
+        event selection modified \\
+        
+        change uncertainties to results 
+        
+\end{enumerate}    
+    
+    
 
 %\maketitle
 
@@ -52,11 +95,12 @@
 \input{section8.tex}
 \input{section9.tex}
 
+\appendix
+\input{Appendices.tex}
+
 \bibliographystyle{unsrt}
 \bibliography{main}
 
-\input{QvsHeightAppendix.tex}
-\input{AppendixFit.tex}
 
 %\input{tempAsymSection.tex}
 \end{document}

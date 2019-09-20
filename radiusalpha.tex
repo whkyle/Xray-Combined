@@ -1,0 +1,86 @@
+\subsection {R coordinate calculation and 
+coefficient of thermal expansion}
+The radial coordinate not directly measured in the X-ray scan is
+calculated using information from the FARO scan of the photodetectors.
+The FARO scan provides highly precise 3D coordinates
+($\sigma_{|\vec{x}|}$ = 200 \micron) of a subset of photodetectors
+(10\%) measured at room temperature. To determine the position of
+every photodetector, these measurements are interpolated by fitting
+the 3D surface formed by the photodetectors. The radial coordinate and
+center are calculted first with a cylindrical fit function, followed
+by z,$\phi$ coordinates fitted to a regularly spaced grid in z-$\phi$
+plane allowing for small rotations in the plane.  Each cfrp plate is
+fitted independently since the curvature varies slightly between
+individual plates and the overall curvature of the calorimeter.  
+
+
+The interpolated photodetector locations from FARO
+and X-ray scans are fitted with degrees of freedom to account for
+global translational motion, extrinsic rotation centered in the MEG
+coordinate  system, and scale factor for thermal contraction. 
+The FARO coordinate is transformed using the equation
+\begin{align}
+\vec{x}_{FARO}^{'} = (1-s)R(\alpha,\beta,\gamma)\vec{x}_{FARO} +
+\vec{x}_{offset},  
+\end{align}
+where $s$ is the scale of thermal contraction, $R$ is the rotation
+matrix  and $\vec{x}_{offset}$ is the linear offset. 
+The fit parameter values are extracted by minimizing the following function
+\begin {align}
+\chi^2 = 
+\sum\limits_{i}^{N_{MPPC}} \frac{(Z_{i}^{Xray}-Z_{i,FARO}^{'})^2}{\sigma_{Z_{i}}^2} 
++ 
+\frac{(\phi_{i}^{Xray}-\phi_{i,FARO}^{'})^2}{\sigma_{\phi_i}^2},
+\end{align}
+where $\sigma_{Z_i}$ and $\sigma_{\phi_i}$ include the resolution
+of X-ray and FARO measurements
+added in quadrature: 
+$\sigma^{FARO}$ = 0.14~mm (0.25~mrad), 
+$\sigma^{Xray}$ = 0.40~mm (0.56~mrad),
+calculated from adjacent MPPC spacing described above.
+
+
+The radial values from the FARO measurement are transformed using
+fitted parameters to calculate radial coordinate of each
+photodetector.  The uncertainty is calculated using linear error
+propagation and corresponds to change in the main result due to one
+standard deviation variation in the parameters taking correlations
+into account.  The results in table \ref{tab:radius} shown mean radius
+648.7 and 644.9~mm,and mean error 0.16 and 0.27~mm respectively in the
+two scans(figure~\ref{fig:radiuscalculation}).  The radial coordinate
+change of 3.8~mm between the two scans is consistent with the shift of
+equal magnitude (3.85$\pm$0.1~mm) in the X-coordinate of the LXe
+calorimeter in the same period.  A $\phi$ dependent change in the
+radial coordinate is seen in 2018 data compared to the previous year's
+data due to the calorimeter center offset with respect to the X-ray
+device in 2018.
+
+
+
+The thermal expansion coefficient is calculated as
+\begin{align}
+ s= \alpha_t \, \Delta T,
+\end{align}
+where s is the scale of thermal contraction, $\alpha_t$ is coefficient
+of thermal expansion and $\Delta T$ is the change in temperature. 
+Using $\Delta T$ ( = 123$\pm$10 K) 
+between FARO survey performed at room temperature
+(293 K) and X-ray survey performed at LXe temperature (170 K)
+the thermal coefficient is calculated in the
+two X-ray surveys (table \ref{tab:thermalcoefficient}).
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+Scan Period & $s$ & $\alpha_t \,\, [\mathrm{ppm K}^{-1}]$\\
+\hline
+2017 & 0.0014(1) & 11.0$\pm$1.4 \\
+2018 & 0.0018(2) & 14.5$\pm$2.2 
+\end{tabular}
+\caption{Fitted scaling parameter ($s$) and the calculated thermal 
+expansion coefficient.}
+\label{tab:thermalcoefficient}
+\end{table}
+The theoretical value of $\alpha_t$ for the
+detectaor material is 16$\pm$1 ppmK$^{-1}$.
+
+
